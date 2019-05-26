@@ -33,6 +33,8 @@ while true; do
 	then 
 		echo "auto-rotating $current"
 		$rotate $current
+		# workaround for touch rotation being unresponsive
+		$rotate $current
 		lastr=$current
 	fi
 
