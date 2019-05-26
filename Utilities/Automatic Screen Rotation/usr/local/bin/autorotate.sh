@@ -13,17 +13,18 @@ while true; do
 	
 	commandx=$(cat $accelx)
 	commandy=$(cat $accely)
+	# echo $commandx ":" $commandy
 	
-	if [[ $commandx -gt 500 ]] && [[ $commandx -lt 1020 ]]
-	then
-		current="ccw"
-	elif [[ $commandx -gt 64000 ]] && [[ $commandx -lt 65200 ]]
+	if [[ $commandx -gt -900000 ]] && [[ $commandx -lt -100000 ]]
 	then
 		current="cw"
-	elif [[ $commandy -gt 300 ]] && [[ $commandy -lt 1000 ]]
+	elif [[ $commandx -gt 100000 ]] && [[ $commandx -lt 900000 ]]
+	then
+		current="ccw"
+	elif [[ $commandy -gt 200000 ]] && [[ $commandy -lt 800000 ]]
 	then
 		current="half"
-	elif [[ $commandy -gt 64490 ]] && [[ $commandy -lt 65100 ]]
+	elif [[ $commandy -gt -900000 ]] && [[ $commandy -lt -400000 ]]
 	then
 		current="none"
 	fi
