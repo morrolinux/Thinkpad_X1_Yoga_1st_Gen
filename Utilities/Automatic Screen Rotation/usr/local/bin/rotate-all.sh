@@ -37,6 +37,10 @@ then
 fi
 
 xrandr --output eDP1 --rotate $xrandr_action
-xinput set-prop "Wacom Pen and multitouch sensor Finger" "Coordinate Transformation Matrix" $CTM
-sleep 1
-xinput set-prop $(xinput |grep "Wacom Pen and multitouch sensor Pen Pen"|cut -d'=' -f2|cut -f 1) "Coordinate Transformation Matrix" $CTM
+for i in {1..2}
+do
+	xinput set-prop "Wacom Pen and multitouch sensor Finger" "Coordinate Transformation Matrix" $CTM
+	xinput set-prop $(xinput |grep "Wacom Pen and multitouch sensor Pen"|cut -d'=' -f2|cut -f 1) "Coordinate Transformation Matrix" $CTM
+	xinput set-prop $(xinput |grep "Wacom Pen and multitouch sensor Pen Pen"|cut -d'=' -f2|cut -f 1) "Coordinate Transformation Matrix" $CTM
+	sleep 2
+done

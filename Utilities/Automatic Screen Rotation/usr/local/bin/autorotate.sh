@@ -15,16 +15,16 @@ while true; do
 	commandy=$(cat $accely)
 	# echo $commandx ":" $commandy
 	
-	if [[ $commandx -gt -900000 ]] && [[ $commandx -lt -100000 ]]
+	if [[ $commandx -gt -800000 ]] && [[ $commandx -lt -200000 ]]
 	then
 		current="cw"
-	elif [[ $commandx -gt 100000 ]] && [[ $commandx -lt 900000 ]]
+	elif [[ $commandx -gt 200000 ]] && [[ $commandx -lt 800000 ]]
 	then
 		current="ccw"
-	elif [[ $commandy -gt 200000 ]] && [[ $commandy -lt 800000 ]]
+	elif [[ $commandy -gt 25000 ]] && [[ $commandy -lt 80000 ]]
 	then
 		current="half"
-	elif [[ $commandy -gt -900000 ]] && [[ $commandy -lt -400000 ]]
+	elif [[ $commandy -gt -80000 ]] && [[ $commandy -lt -25000 ]]
 	then
 		current="none"
 	fi
@@ -33,7 +33,6 @@ while true; do
 	then 
 		echo "auto-rotating $current"
 		$rotate $current
-		# workaround for touch rotation being unresponsive
 		$rotate $current
 		lastr=$current
 	fi

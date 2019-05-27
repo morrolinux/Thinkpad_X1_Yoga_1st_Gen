@@ -1,0 +1,14 @@
+[Desktop Entry]
+Categories=GNOME;GTK;Utility;
+Comment=Rotate the screen
+Encoding=UTF-8
+Exec=rotate-all.sh cw
+Icon=deepin-clone
+MimeType=application/x-xoj;application/x-xojpp;application/x-xopp;application/x-xopt;application/pdf;
+Name=Rotation Book
+StartupNotify=true
+Terminal=false
+Type=Application
+X-Deepin-AppID=rotation-book
+X-Deepin-CreatedBy=com.deepin.dde.daemon.Launcher
+X-Deepin-Vendor=user-custom
