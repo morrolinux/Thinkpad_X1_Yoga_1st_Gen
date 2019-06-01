@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=wacom configuration
+Type=Application
+Terminal=false
+Exec=/usr/local/bin/wacom-second-button.sh

@@ -1,0 +1,3 @@
+- copy the directory structure over your filesystem
+- copy the content of the .config folder in your home directory
+- install wacom driver (xf86-input-wacom)
