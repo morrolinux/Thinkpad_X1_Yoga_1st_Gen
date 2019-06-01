@@ -41,6 +41,7 @@ wacom_area=$(xsetwacom get "Wacom Pen and multitouch sensor Pen stylus" Area)
 xsetwacom set "Wacom Pen and multitouch sensor Pen stylus" "Rotate" $rotation
 sleep 1
 xsetwacom set "Wacom Pen and multitouch sensor Pen stylus" Area $wacom_area
+xsetwacom set "Wacom Pen and multitouch sensor Pen eraser" Area $wacom_area
 xinput set-prop "Wacom Pen and multitouch sensor Finger" "Coordinate Transformation Matrix" $CTM
 
 # xinput set-prop $(xinput |grep "Wacom Pen and multitouch sensor Pen"|cut -d'=' -f2|cut -f 1) "Coordinate Transformation Matrix" $CTM
